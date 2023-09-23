@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const resultElement = document.getElementById("result");
   const ageElement = document.getElementById("age");
 
-  centimetersInput.addEventListener("input", function () {
+  const recalculate = () => {
     const centimetersValue = parseFloat(centimetersInput.value);
     const age = parseInt(ageElement.value);
 
@@ -42,5 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Append the table to the result element
     resultElement.appendChild(table);
-  });
+  }
+
+  centimetersInput.addEventListener("input", recalculate);
+  ageElement.addEventListener("input", recalculate);
 }); 
