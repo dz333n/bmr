@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const centimetersInput = document.getElementById("centimeters");
   const resultElement = document.getElementById("result");
+  const ageElement = document.getElementById("age");
 
   centimetersInput.addEventListener("input", function () {
     const centimetersValue = parseFloat(centimetersInput.value);
+    const age = parseInt(ageElement.value);
 
     // Clear the previous results
     resultElement.innerHTML = "";
@@ -29,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const femaleCell = row.insertCell();
 
       // BMR formulas for male and female
-      const maleBMR = 10 * weight + 6.25 * centimetersValue - 5 * 25 + 5;
-      const femaleBMR = 10 * weight + 6.25 * centimetersValue - 5 * 25 - 161;
+      const maleBMR = (13.7516 * weight) + (5.0033 * centimetersValue) - (6.755 * age) + 66.473;
+      const femaleBMR = (9.5634 * weight) + (1.8496 * centimetersValue) - (4.6756 * age) + 655.0955;
 
       // Round BMR values to two decimal places
       weightCell.textContent = weight;
