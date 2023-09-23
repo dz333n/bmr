@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const femaleCell = row.insertCell();
 
       // BMR formulas for male and female
-      const maleBMR = (13.7516 * weight) + (5.0033 * centimetersValue) - (6.755 * age) + 66.473;
-      const femaleBMR = (9.5634 * weight) + (1.8496 * centimetersValue) - (4.6756 * age) + 655.0955;
+      const maleBMR = (10 * weight) + (6.25 * centimetersValue) - (5 * age) + 5;
+      const femaleBMR = BMR = (10 * weight) + (6.25 * centimetersValue) - (5 * age) - 161;
 
       // Round BMR values to two decimal places
       weightCell.textContent = weight;
